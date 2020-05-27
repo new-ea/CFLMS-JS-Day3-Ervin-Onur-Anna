@@ -1,20 +1,16 @@
+//Date Format must be like "May 27 2020"
 let dateTime = function(currentDate){
-    let obj = new Date();
-    let d = obj.getDate();
-    let m = obj.getMonth()+1;
-    let y = obj.getFullYear();
-    let fullDate = d + "-" + m + "-" + y;
+    const today = new Date(currentDate);
+    today.setDate(today.getDate() - 1);
+    let t = today.toDateString().slice(4);
+    return t;
+}   
 
-    if (fullDate == currentDate) {
-        d -= 1;
-        fullDate = d + "-" + m + "-" + y;
-        console.log(fullDate);   
-    }   
-}
+let myDate = "May 1 2020";
+let ok = dateTime(myDate);
+console.log(ok);
 
-let date = "25-5-2020";
-let test = dateTime("27-5-2020");
-console.log(test);
+
 
 
 
