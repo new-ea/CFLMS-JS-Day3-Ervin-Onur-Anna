@@ -6,5 +6,5 @@ function convertTime(minutes){
     return minutes + " = " + hours + " hour(s) and " + rest + " minute(s).";
 }
 
-let out = convertTime(200);
-console.log(out);
+let minutes = 320;
+let out = convertTime(minutes);
